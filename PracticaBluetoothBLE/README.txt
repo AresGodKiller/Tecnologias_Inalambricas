@@ -7,6 +7,8 @@ Eduardo Cadengo López -
 Itzel Citlalli Martell De La Cruz - 
 Damian Alexander Diaz Piña -
 
+Link GitHub:https://github.com/AresGodKiller/Tecnologias_Inalambricas/tree/3e9ec20d6efc0e0302e648c131efc979d9112a2c/PracticaBluetoothBLE
+
 Placa utilizada y Componentes utilizados:
 
 ESP32 (compatible con cualquier ESP32 estándar con Bluetooth BLE)
