@@ -65,7 +65,7 @@ void setup() {
   pinMode(LED3_PIN, OUTPUT);
   setAll(false);
 
-  BLEDevice::init("ESP32_NiggerSicsSeven"); 
+  BLEDevice::init("ESP32_EquipoSicsSeven"); 
   BLEServer *pServer = BLEDevice::createServer();
   pServer->setCallbacks(new MyServerCallbacks());
 
