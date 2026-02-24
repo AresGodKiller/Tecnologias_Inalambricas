@@ -1,13 +1,17 @@
-README – Control de LEDs por BLE con ESP32 y MIT App Inventor
+README – Control de un Foco por BLE con ESP32 y MIT App Inventor
 
-Fecha: 19/02/2026
+Fecha: 24/02/2026
 
 Integrantes:
 Eduardo Cadengo López - 
 Itzel Citlalli Martell De La Cruz - 
 Damian Alexander Diaz Piña -
 
-Link GitHub:https://github.com/AresGodKiller/Tecnologias_Inalambricas/tree/main/PracticaBluetoothBLE---------------cambiar
+Links
+
+GitHub: https://github.com/AresGodKiller/Tecnologias_Inalambricas/blob/main/PracticaBluetoothBLE_Foco
+
+Video demostrativo: https://youtu.be/BVj0oOwOyGk
 
 Placa utilizada y Componentes utilizados:
 ESP32 (compatible con cualquier ESP32 estándar con Bluetooth BLE)
@@ -122,5 +126,3 @@ App cambia automáticamente de interfaz al conectarse haciendo que ahora pase a 
 Comandos simples (1 carácter), baja latencia
 Estados visuales con Un foco
 
-Video demostrativo:
-https://youtube.com/shorts/lvOKkD2mKzA?feature=share
