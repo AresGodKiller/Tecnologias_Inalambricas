@@ -40,8 +40,8 @@ void onWrite(BLECharacteristic* pCharacteristic) override {
   Serial.println(c);
 
   switch (c) {
-    case 'A': digitalWrite(LED1_PIN, HIGH); break; // Es el dato que le llega al esp32 para que prenda el foco
-    case 'a': digitalWrite(LED1_PIN, LOW);  break; // Es el dato que le llega al esp32 para que apague el foco
+    case 'A': digitalWrite(LED2_PIN, HIGH); break; // Es el dato que le llega al esp32 para que prenda el foco
+    case 'a': digitalWrite(LED2_PIN, LOW);  break; // Es el dato que le llega al esp32 para que apague el foco
     default:
       Serial.println("Comando no reconocido");
       break;
@@ -58,7 +58,7 @@ void setup() {
   
   setAll(false);
 
-  BLEDevice::init("ESP32_EquipoSicsSeven"); // Es el nombre que le pondremos a al ESP32 cuando se conecte por Bluetooth
+  BLEDevice::init("ESP32_LEDs_Lalo_FOCO"); // Es el nombre que le pondremos a al ESP32 cuando se conecte por Bluetooth
   BLEServer *pServer = BLEDevice::createServer();
   pServer->setCallbacks(new MyServerCallbacks());
 
