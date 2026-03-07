@@ -18,7 +18,6 @@ Placa utilizada y Componentes utilizados:
 2 ESP32 (o 1 ESP32 y 1 Arduino UNO/Nano)
 Protoboard
 Jumpers (cables cortos)
-Capacitor de 10–47 µF entre 3.3 V y GND del NRF24L01
 Cable USB para programar cada microcontrolador
 
 
