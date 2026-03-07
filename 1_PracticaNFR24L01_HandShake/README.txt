@@ -7,7 +7,10 @@ Eduardo Cadengo López -
 Itzel Citlalli Martell De La Cruz - 
 Damian Alexander Diaz Piña -
 
-Link GitHub: (colocar cuando se suba la práctica)
+Video demostrativo:
+https://youtu.be/Wdm9OlAvnIU?si=FW8ECXgMGvFUuMiW
+
+Link GitHub: https://github.com/AresGodKiller/Tecnologias_Inalambricas/tree/main/1_PracticaNFR24L01_HandShake
 
 Placa utilizada y Componentes utilizados:
 
@@ -130,5 +133,3 @@ Configuración de canal y potencia para mejorar estabilidad.
 Recepción continua mientras el TX siga activo.
 
 
-Video demostrativo:
-https://youtu.be/Wdm9OlAvnIU?si=FW8ECXgMGvFUuMiW
