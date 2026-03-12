@@ -1,7 +1,7 @@
 README – Comunicación Inalámbrica con NRF24L01 (TX/RX) usando ESP32 y PushButton/LED
 Fecha: 11/03/2026
-Integrantes
 
+Integrantes
 Eduardo Cadengo López -
 Itzel Citlalli Martell De La Cruz - 
 Damian Alexander Diaz Piña -
@@ -11,7 +11,7 @@ Video demostrativo
 https://youtube.com/shorts/ukE-nj5UNh0?feature=share
 
 Repositorio GitHub
-
+https://github.com/AresGodKiller/Tecnologias_Inalambricas/tree/main/2_Practica%20NFR24L01_EnvioYLed
 
 Placa utilizada y Componentes utilizados
 
