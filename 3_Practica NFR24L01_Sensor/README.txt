@@ -9,7 +9,7 @@ Damian Alexander Díaz Piña
 https://youtu.be/xSb_0cPzFfY
 
  Repositorio GitHub
-(pendiente de agregar)
+https://github.com/AresGodKiller/Tecnologias_Inalambricas/tree/main/3_Practica%20NFR24L01_Sensor
 
  Descripción del proyecto
 En esta práctica se establece una comunicación inalámbrica entre dos dispositivos usando módulos NRF24L01:
