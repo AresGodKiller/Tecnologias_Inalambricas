@@ -8,10 +8,10 @@ Damian Alexander Díaz Piña
 
 
  Video demostrativo
-https://youtu.be/xSb_0cPzFfY
+https://youtu.be/4Lp5CuFM2ao 
 
  Repositorio GitHub
-https://github.com/AresGodKiller/Tecnologias_Inalambricas/tree/main/3_Practica%20NFR24L01_Sensor
+https://github.com/AresGodKiller/Tecnologias_Inalambricas/tree/main/Evaluativo2_NRF24l01_SistemaControl
 
 
  Descripción del proyecto
