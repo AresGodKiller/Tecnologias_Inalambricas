@@ -141,10 +141,10 @@ uint8_t tarjetaAutorizada[4] = { ... };
 11) Enlaces (GitHub y Video)
 ------------------------------------------------------------
 GitHub:
-- [PEGA AQUI TU LINK DE GITHUB]
+-https://github.com/AresGodKiller/Tecnologias_Inalambricas/tree/main/NFC_Autorizacion
 
 Video:
-- [PEGA AQUI TU LINK DEL VIDEO]
+- https://youtu.be/Sqr3yWxgc4s
 
 ------------------------------------------------------------
 12) Problemas comunes (rápido)
