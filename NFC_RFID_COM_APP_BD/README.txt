@@ -1,114 +1,150 @@
 ============================================================
-README - Control de Acceso NFC/RFID mediante una aplicacion externa
-ESP32 + Módulo PN532 (I2C)
+README – Práctica: Control de Acceso con NFC / RFID
+ESP32 + PN532 + Comunicación por Puerto COM
 ============================================================
 
-Nombre del proyecto:
-Control de Acceso NFC/RFID con ESP32 y PN532
+Nombre de la práctica:
+Lectura y Validación de Tarjetas NFC/RFID para Control de Acceso
 
 Materia:
 Tecnologías Inalámbricas
 
 Fecha:
-15/04/2026
+Abril 2026
 
 Integrantes:
-• Eduardo Cadengo López
-• Itzel Citlalli Martell De La Cruz
-• Damian Alexander Diaz Piña
+- Eduardo Cadengo López
+- Itzel Citlalli Martell De La Cruz
+- Damian Alexander Díaz Piña
 
 ------------------------------------------------------------
-DESCRIPCIÓN GENERAL
+DESCRIPCIÓN DE LA PRÁCTICA
 ------------------------------------------------------------
-Este proyecto implementa un sistema de control de acceso utilizando una ESP32 y un módulo NFC PN532. El sistema permite leer el UID (Identificador Único) de tarjetas NFC/RFID compatibles con el estándar ISO/IEC 14443A y usar dicho UID como credencial para autorizar o denegar el acceso a un proceso.
+En esta práctica se desarrolla un sistema de control de acceso
+utilizando tecnología NFC/RFID. El sistema está basado en una
+ESP32 como microcontrolador y un módulo NFC PN532 configurado en
+modo I2C.
 
-El UID leído se muestra en el monitor serial en tres representaciones numéricas:
-- Base 16 (Hexadecimal)
-- Base 10 (Decimal)
-- Base 2 (Binaria)
+El objetivo principal es leer el UID (Identificador Único) de una
+tarjeta NFC o RFID, mostrarlo en diferentes bases numéricas y
+utilizarlo como identificador para permitir o denegar el acceso
+a un proceso, simulando aplicaciones reales como cerraduras
+electrónicas o el inicio y término de operaciones.
 
-Adicionalmente, la ESP32 envía la información de la tarjeta en formato JSON a través del puerto COM, permitiendo que aplicaciones externas (por ejemplo, un programa en Python) puedan leer y procesar los datos.
+Además, la ESP32 envía la información de la tarjeta en formato
+JSON a través del puerto COM, para que pueda ser leída y mostrada
+desde un programa externo desarrollado en Python.
 
 ------------------------------------------------------------
 OBJETIVO DE LA PRÁCTICA
 ------------------------------------------------------------
-- Leer el UID de una tarjeta NFC/RFID usando el módulo PN532.
-- Mostrar el UID en bases hexadecimal, decimal y binaria.
-- Validar el UID contra una lista de tarjetas autorizadas.
-- Simular la apertura de una cerradura o el inicio de operaciones mediante una salida digital.
-- Recuperar el número de tarjeta desde el puerto COM usando un lenguaje de programación externo.
+El objetivo se considera cumplido cuando:
+
+- El sistema detecta una tarjeta NFC/RFID.
+- El UID de la tarjeta se muestra en el Monitor Serial.
+- El UID se presenta en Base 16, Base 10 y Base 2.
+- Se valida el UID para conceder o denegar el acceso.
+- Los datos son recuperados desde el puerto COM mediante un
+  lenguaje de programación externo.
 
 ------------------------------------------------------------
-TECNOLOGÍA UTILIZADA (RFID / NFC)
+TECNOLOGÍA RFID / NFC
 ------------------------------------------------------------
-RFID (Radio Frequency Identification) es una tecnología de identificación inalámbrica que emplea radiofrecuencia para identificar objetos o personas mediante etiquetas electrónicas.
+RFID (Radio Frequency Identification) es una tecnología que
+permite identificar objetos o personas utilizando radiofrecuencia.
 
-NFC (Near Field Communication) es una variante de RFID de alta frecuencia (13.56 MHz) diseñada para comunicaciones a corta distancia. Se basa en el estándar ISO/IEC 14443, utilizado ampliamente en sistemas de control de acceso, pagos sin contacto y credenciales electrónicas.
+NFC (Near Field Communication) es una variante de RFID de alta
+frecuencia (13.56 MHz) diseñada para comunicación a corta
+distancia. Está basada en normas como ISO/IEC 14443 y es común en
+sistemas de acceso, pagos sin contacto y credenciales digitales.
 
 ------------------------------------------------------------
-MATERIAL UTILIZADO
+MÓDULO UTILIZADO: PN532
 ------------------------------------------------------------
-- 1x ESP32 (DevKit o equivalente)
-- 1x Módulo NFC PN532 (configurado en modo I2C)
-- 1x Tarjeta NFC compatible (NFC-A / ISO14443A)
+El PN532 es un controlador NFC que permite la lectura de tarjetas
+sin contacto. Soporta los protocolos ISO14443A y puede comunicarse
+con microcontroladores mediante I2C, SPI o UART.
+
+En esta práctica se utiliza en modo lector mediante I2C para
+detectar tarjetas NFC tipo A y obtener su UID.
+
+------------------------------------------------------------
+MATERIALES UTILIZADOS
+------------------------------------------------------------
+- ESP32 (DevKit o similar)
+- Módulo NFC PN532 (modo I2C)
+- Tarjeta NFC/RFID compatible (ISO14443A)
 - Cables Dupont
 - Protoboard (opcional)
-- LED o relé para simular una cerradura o maquinaria (opcional)
+- LED o relé para simular acceso (opcional)
 
 ------------------------------------------------------------
 CONEXIONES (ESP32 <-> PN532) [I2C]
 ------------------------------------------------------------
-ESP32        PN532
-- 3V3   ---> VCC (3.3V)
-- GND   ---> GND
-- GPIO21 ---> SDA
-- GPIO22 ---> SCL
+ESP32            PN532
+--------------------------------
+3V3   ----------> VCC
+GND   ----------> GND
+GPIO21 ----------> SDA
+GPIO22 ----------> SCL
 
 Salida de control:
-- GPIO2 ---> LED o relé (simulación de acceso)
+GPIO2 ----------> LED o relé
 
-IMPORTANTE:
-- Verificar que el módulo PN532 esté configurado en modo I2C.
-- Asegurar tierra común (GND) entre la ESP32 y el módulo.
+NOTA:
+Es indispensable verificar que el módulo PN532 esté configurado
+en modo I2C.
 
 ------------------------------------------------------------
-LIBRERÍAS Y ENTORNO DE DESARROLLO
+ENTORNO DE DESARROLLO
 ------------------------------------------------------------
 - Arduino IDE
-- Librerías utilizadas:
+- Librerías empleadas:
   - Wire.h
   - Adafruit_PN532.h
 
 ------------------------------------------------------------
 FUNCIONAMIENTO DEL SISTEMA
 ------------------------------------------------------------
-1. La ESP32 inicializa el módulo PN532 y la comunicación serial.
-2. El PN532 detecta la presencia de una tarjeta NFC/RFID.
-3. Se lee el UID de la tarjeta.
-4. El UID se imprime en HEX, DEC y BIN en el monitor serial.
-5. El sistema compara el UID con una lista de tarjetas autorizadas.
-6. Si el UID coincide:
+1. La ESP32 inicializa la comunicación serial y el módulo PN532.
+2. El lector NFC espera la presencia de una tarjeta.
+3. Al detectar una tarjeta, se lee su UID.
+4. El UID se muestra en el Monitor Serial en:
+   - Base 16 (HEX)
+   - Base 10 (DEC)
+   - Base 2 (BIN)
+5. El UID se compara con una lista de tarjetas autorizadas.
+6. Si la tarjeta está autorizada:
    - Se concede el acceso
-   - Se activa la salida digital (LED/relé)
-7. Si no coincide:
+   - Se activa una salida digital
+7. Si no está autorizada:
    - Se deniega el acceso
-8. Los datos se envían en formato JSON por el puerto COM.
+8. La información se envía por el puerto COM en formato JSON.
 
 ------------------------------------------------------------
-FORMATO DE SALIDA JSON (PUERTO COM)
+FORMATO DE DATOS ENVIADOS POR SERIAL (JSON)
 ------------------------------------------------------------
-Ejemplo de trama enviada:
-{"hex":"49:1C:33:07","dec":12345678,"bin":"01001001 ...","acceso":true}
+Ejemplo de salida:
+
+{
+  "hex":"49:1C:33:07",
+  "dec":12345678,
+  "bin":"01001001 00011100 00110011 00000111",
+  "acceso":true
+}
 
 ------------------------------------------------------------
-LECTURA DESDE PYTHON
+LECTURA DEL PUERTO COM DESDE PYTHON
 ------------------------------------------------------------
-Se incluye un programa en Python (lector_com.py) que:
-- Abre el puerto COM asignado a la ESP32
-- Lee las tramas JSON enviadas por Serial
-- Muestra en pantalla el UID y el estado de acceso
+Se utiliza un programa en Python (lector_com.py) que permite:
 
-Este programa puede integrarse fácilmente con aplicaciones de escritorio o web.
+- Abrir el puerto COM asignado a la ESP32
+- Leer las tramas enviadas por Serial
+- Decodificar los datos JSON
+- Mostrar el UID y el estado de acceso en pantalla
+
+Esto permite integrar el sistema con aplicaciones de escritorio
+o plataformas web.
 
 ------------------------------------------------------------
 SALIDA ESPERADA (EJEMPLO)
@@ -122,20 +158,21 @@ Base 2 (BIN): 01001001 00011100 00110011 00000111
 ------------------------------------------------------------
 PROBLEMAS COMUNES
 ------------------------------------------------------------
-- PN532 no detectado:
-  - Revisar alimentación y GND
+- El PN532 no es detectado:
+  - Revisar conexiones VCC y GND
   - Verificar modo I2C
-  - Revisar pines SDA/SCL
+  - Revisar pines SDA y SCL
 
-- No hay salida por Monitor Serial:
+- No aparecen datos en el Monitor Serial:
   - Verificar baudrate (115200)
-  - Confirmar puerto COM correcto
+  - Confirmar el puerto COM correcto
 
 ------------------------------------------------------------
-ENLACES Y EVIDENCIAS
+EVIDENCIAS
 ------------------------------------------------------------
+
 GitHub del proyecto: 
-https://github.com/AresGodKiller/Tecnologias_Inalambricas/tree/main/NFC_RFID_COM_APP
+https://github.com/AresGodKiller/Tecnologias_Inalambricas/tree/main/NFC_RFID_COM_APP_BD
 
 Video de demostración: 
 https://youtube.com/shorts/i_WNlqsTOLc
