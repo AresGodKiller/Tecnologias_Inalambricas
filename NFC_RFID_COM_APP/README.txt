@@ -1,5 +1,5 @@
 ============================================================
-README - Control de Acceso NFC/RFID
+README - Control de Acceso NFC/RFID mediante una aplicacion externa
 ESP32 + Módulo PN532 (I2C)
 ============================================================
 
