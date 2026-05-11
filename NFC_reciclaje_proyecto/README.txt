@@ -10,7 +10,7 @@ Materia:
 Tecnologías Inalámbricas
 
 Fecha:
-10/05/2026
+11/05/2026
 
 Integrantes:
 • Eduardo Cadengo López
