@@ -120,7 +120,7 @@ PROBLEMAS COMUNES
 ENLACES Y EVIDENCIAS
 ------------------------------------------------------------
 GitHub del proyecto: 
-https://github.com/AresGodKiller/Tecnologias_Inalambricas
+https://github.com/AresGodKiller/Tecnologias_Inalambricas/tree/main/NFC_reciclaje_proyecto
 
 Video de demostración: 
 https://youtu.be/eAWvPgxPVLo
