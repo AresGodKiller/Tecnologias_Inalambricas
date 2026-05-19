@@ -158,7 +158,7 @@ La pagina carga pero el formulario no funciona:
 ENLACES Y EVIDENCIAS
 ---------------------
 GitHub del proyecto:
-  (agregar enlace al repositorio)
+  https://github.com/AresGodKiller/Tecnologias_Inalambricas/tree/main/ESP32_PortalCautivo
 
 Video de demostracion:
-  (agregar enlace al video)
+ https://www.youtube.com/shorts/VcKZFpCU6pw
