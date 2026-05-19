@@ -195,7 +195,7 @@ La conexion se cae frecuentemente:
 ENLACES Y EVIDENCIAS
 ---------------------
 GitHub del proyecto:
-  https://github.com/AresGodKiller/Tecnologias_Inalambricas/tree/main/ESP32_AccessPoint
+  https://github.com/AresGodKiller/Tecnologias_Inalambricas/tree/main/ESP32_AccesPoint
 
 Video de demostracion:
   https://youtube.com/shorts/9D4zA5Ziaxo?feature=share
