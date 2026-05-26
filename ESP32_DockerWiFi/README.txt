@@ -220,6 +220,9 @@ ESTRUCTURA DE ARCHIVOS
   README.txt                  Este archivo
 
 
-REPOSITORIO
+REPOSITORIO Y VIDEO
 ------------
-  https://github.com/AresGodKiller/Tecnologias_Inalambricas
+GitHub: https://github.com/AresGodKiller/Tecnologias_Inalambricas/tree/main/ESP32_DockerWiFi
+
+YouTube Video: https://youtube.com/shorts/i1MqJNeStbQ?feature=share
+
