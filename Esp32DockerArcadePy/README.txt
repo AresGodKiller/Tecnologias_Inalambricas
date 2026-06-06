@@ -1,6 +1,6 @@
-================================================================================
+
 README - Centro Arcade con ESP32, NFC/RFID, WiFi y SQL Server en Docker
-================================================================================
+
 
 Nombre del proyecto:
   Centro Arcade con ESP32, NFC/RFID, WiFi y SQL Server en Docker
@@ -260,12 +260,9 @@ PROBLEMAS COMUNES Y SOLUCIONES (TROUBLESHOOTING)
       garantizando que la longitud del string hexadecimal sea homogénea.
 
 
-ESTRUCTURA FINAL DE ARCHIVOS DEL PROYECTO
-------------------------------------------
-  ├── server.js                  # Lógica del servidor intermediario REST API (Node.js)
-  ├── esp32_mssql_Definitivo.ino # Firmware de control del ESP32 y lector PN532 (Arduino)
-  ├── launcher_esp32_wifi.py     # Coordinador de interfaz gráfica de registro y puerto Serial (Python)
-  ├── snake_gui.py               # Código fuente del videojuego interactivo Snake (Python)
-  ├── package.json               # Definición de scripts y dependencias del ecosistema Node.js
-  └── README.txt                 # Este manual técnico de despliegue y documentación
-================================================================================
+Evidencias:
+
+YouTube:https://youtube.com/shorts/C8QyNg6J734?feature=share
+
+GitHub:https://github.com/AresGodKiller/Tecnologias_Inalambricas/tree/main/Esp32DockerArcadePy
+
